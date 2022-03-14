@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,17 +34,26 @@
     </v-app-bar>
 
     <v-main>
+      <div class="buttons">
+        <button class="button is-primary">Primary</button>
+        <button class="button is-link">Link</button>
+      </div>
+
+      <div class="buttons">
+        <button class="button is-info">Info</button>
+        <button class="button is-success">Success</button>
+        <button class="button is-warning">Warning</button>
+        <button class="button is-danger">Danger</button>
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
   name: 'App',
 
-  components: {
-  },
+  components: {},
 
   data: () => ({
     //
