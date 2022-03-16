@@ -4,7 +4,12 @@ import Vuetify from 'vuetify/lib/framework';
 Vue.use(Vuetify);
 
 export default new Vuetify({
-  icons: {
-    iconfont: 'fa',
+  theme: {
+    themes: {
+      light: {
+        primary: '#94CACB',
+        secondary: '#1F2937',
+      },
+    },
   },
 });
