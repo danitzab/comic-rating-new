@@ -1,5 +1,12 @@
 .header {
-    background: $turquoise;
-    // background: #38B2AC;
+    background: linear-gradient(to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)), 
+    url(https://camo.githubusercontent.com/45e50da8ea583bda8c8c32a50d991fe775aacb4372eec644dc6e8c58bfa53241/687474703a2f2f696d67732e786b63642e636f6d2f636f6d6963732f6c6973705f6379636c65732e706e67);
+    height: 100px;
     color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-size: 337px 87px;
+    font-size: 2.5rem;
 }

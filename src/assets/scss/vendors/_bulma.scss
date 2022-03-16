@@ -1,16 +1,17 @@
 @charset "utf-8";
 
 // Import only what you need from Bulma
-// @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/sass/utilities/functions";
 
 // Update Bulma's global variables
 $primary: $color-primary;
 $secondary: $color-secondary;
+$yellow: $color-yellow;
 
 // Add new colors
 $addColors: (
-  "secondary": ($secondary, findColorInvert($secondary))
+  "secondary": ($secondary, findColorInvert($secondary)),
+  "yellow": ($yellow, findColorInvert($yellow)),
 );
 
 $custom-colors: $addColors;
