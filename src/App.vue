@@ -1,62 +1,34 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+  <v-app class="comic-rating">
+    <Header />
+    <div class="comic-rating__content">
+      <div class="columns m-0">
+        <div class="column is-8">
+          <Comic />
+        </div>
+        <div class="column">
+          <Ranking />
+        </div>
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <div class="buttons">
-        <button class="button is-primary">Primary</button>
-        <button class="button is-link">Link</button>
-      </div>
-
-      <div class="buttons">
-        <button class="button is-info">Info</button>
-        <button class="button is-success">Success</button>
-        <button class="button is-warning">Warning</button>
-        <button class="button is-danger">Danger</button>
-      </div>
-    </v-main>
+    </div>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
+import Comic from '@/components/Comic.vue';
+import Ranking from '@/components/Ranking.vue';
+import Footer from '@/components/Footer.vue';
+
 export default {
   name: 'App',
 
-  components: {},
-
-  data: () => ({
-    //
-  }),
+  components: {
+    Header,
+    Comic,
+    Ranking,
+    Footer,
+  },
 };
 </script>
