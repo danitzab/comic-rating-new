@@ -13,7 +13,7 @@
     </div>
 
     <div v-for="(item, index) in ranking" :key="index">
-      <v-divider v-if="index !== 0" class=""></v-divider>
+      <v-divider v-if="index !== 0"></v-divider>
       <div class="m-4">
         <div class="columns is-mobile">
           <div class="column is-4">
@@ -51,7 +51,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { types } from '@/store/module/comicRating/types';
+import { types } from '@/store/module/comic/types';
 
 export default {
   data() {
