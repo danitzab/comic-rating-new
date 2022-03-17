@@ -1,10 +1,11 @@
 import { actions } from './actions';
 import { mutations } from './mutations';
-import { COMIC_RATING } from './types';
+import { COMIC } from './types';
 
 export const module = {
   namespaced: true,
   state: {
+    isLoading: false,
     data: {},
     lastId: 0,
     currentId: 0,
@@ -14,4 +15,4 @@ export const module = {
   mutations,
 };
 
-export const name = COMIC_RATING;
+export const name = COMIC;

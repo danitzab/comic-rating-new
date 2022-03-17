@@ -1,8 +1,9 @@
-export const COMIC_RATING = '@module/comicRating';
+export const COMIC = '@module/comic';
 
 export const types = {
-  PATH: `${COMIC_RATING}`,
+  PATH: `${COMIC}`,
   mutations: {
+    SET_IS_LOADING: '@mutations/setIsLoading',
     SET_DATA: '@mutations/setData',
     SET_CURRENT_ID: '@mutations/setCurrentId',
     SET_LAST_ID: '@mutations/setLastId',

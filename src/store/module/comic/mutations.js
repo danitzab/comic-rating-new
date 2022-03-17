@@ -1,6 +1,9 @@
 import { types } from './types';
 
 export const mutations = {
+  [types.mutations.SET_IS_LOADING](state, payload) {
+    state.isLoading = payload;
+  },
   [types.mutations.SET_DATA](state, payload) {
     state.data = payload;
   },
