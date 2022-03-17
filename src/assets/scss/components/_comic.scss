@@ -1,4 +1,9 @@
 .comic {
+  &-loading {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &-image {
     max-height: 500px;
   }

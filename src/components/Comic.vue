@@ -2,57 +2,65 @@
   <div
     class="comic is-flex is-align-items-center is-justify-content-center p-5"
   >
-    <v-btn
-      class="mx-2 has-background-primary has-text-white"
-      fab
-      small
-      elevation="0"
-      @click="getComicById(currentId - 1)"
-    >
-      <v-icon dark>mdi-chevron-left</v-icon>
-    </v-btn>
-
-    <div class="has-text-centered">
-      <h4
-        class="
-          font-caveat-brush
-          has-text-primary
-          is-size-3
-          has-text-weight-bold
-          mt-3
-        "
+    <img
+      v-if="isLoading"
+      class="comic-loading"
+      src="https://intercartagena.com/wp-content/plugins/portfolio-filter-gallery//img/loading-icon.gif"
+      alt="loading"
+    />
+    <template v-else>
+      <v-btn
+        class="mx-2 has-background-primary has-text-white"
+        fab
+        small
+        elevation="0"
+        @click="getComicById(currentId - 1)"
       >
-        {{ data.title }}
-      </h4>
-      <v-list-item-subtitle class="has-text-weight-semibold">
-        {{ data.year }}
-      </v-list-item-subtitle>
-      <div class="p-5">
-        <img
-          class="comic-image"
-          :src="data.img"
-          :alt="data.alt"
-        />
+        <v-icon dark>mdi-chevron-left</v-icon>
+      </v-btn>
+
+      <div class="has-text-centered">
+        <h4
+          class="
+            font-caveat-brush
+            has-text-primary
+            is-size-3
+            has-text-weight-bold
+            mt-3
+          "
+        >
+          {{ data.title }}
+        </h4>
+        <v-list-item-subtitle class="has-text-weight-semibold">
+          {{ data.year }}
+        </v-list-item-subtitle>
+        <div class="p-5">
+          <img
+            class="comic-image"
+            :src="data.img"
+            :alt="data.alt"
+          />
+        </div>
+        <div class="is-size-6 has-text-weight-semibold">Calificación</div>
+        <Rating v-model="rating" />
       </div>
-      <div class="is-size-6 has-text-weight-semibold">Calificación</div>
-      <Rating v-model="rating" />
-    </div>
-    <v-btn
-      v-show="currentId != lastId"
-      class="mx-2 has-background-primary has-text-white"
-      fab
-      small
-      elevation="0"
-      @click="getComicById(currentId + 1)"
-    >
-      <v-icon dark>mdi-chevron-right</v-icon>
-    </v-btn>
+      <v-btn
+        v-show="currentId != lastId"
+        class="mx-2 has-background-primary has-text-white"
+        fab
+        small
+        elevation="0"
+        @click="getComicById(currentId + 1)"
+      >
+        <v-icon dark>mdi-chevron-right</v-icon>
+      </v-btn>
+    </template>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import { types } from '@/store/module/comicRating/types';
+import { types } from '@/store/module/comic/types';
 
 import Rating from '@/components/Rating.vue';
 
@@ -61,7 +69,13 @@ export default {
     Rating,
   },
   computed: {
-    ...mapState(types.PATH, ['data', 'currentId', 'lastId', 'ratings']),
+    ...mapState(types.PATH, [
+      'data',
+      'currentId',
+      'lastId',
+      'ratings',
+      'isLoading',
+    ]),
     rating: {
       get() {
         return this.ratings[this.data.num]?.rating || 0;
