@@ -1,29 +1,38 @@
-# comic-rating
+# Comics Rating
 
-## Project setup
+An application deployed on **Aws** that allows you to rate comics and save the ratings in the **state** ([https://d2giqu246cz24p.cloudfront.net//](https://d2giqu246cz24p.cloudfront.net//))
+
+## Used Libraries or Technologies
+
+- Vue
+- Vuex
+- Vuetify
+- Bulman
+- Sass
+- Jest
+
+## Commands
+
+Install dependencies:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Run the project in development mode.
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run the unit tests.
 
-### Run your unit tests
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+Run the unit tests with coverage.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+npm run test:coverage
+```
