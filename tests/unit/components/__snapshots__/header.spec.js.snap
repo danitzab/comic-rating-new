@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in the Header components should render the component correctly 1`] = `
+<header class="header p-4 font-rock-salt">
+  Comic Rating
+</header>
+`;

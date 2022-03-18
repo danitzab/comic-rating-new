@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`module should do something 1`] = `
+<footer class="font-montserrat px-6 py-5">
+  <div class="has-text-centered">
+    <div class="mb-2">Redes Sociales</div> <a href="https://www.linkedin.com/in/danitzabonilla/" target="_blank" rel="noopener noreferrer" class="mx-1"><i aria-hidden="true" class="v-icon notranslate mdi mdi-linkedin theme--light" style="color: rgba(255, 255, 255, 1); caret-color: #ffff;"></i></a> <a href="https://github.com/Danitzab" target="_blank" rel="noopener noreferrer" class="mx-1"><i aria-hidden="true" class="v-icon notranslate mdi mdi-github theme--light" style="color: rgba(255, 255, 255, 1); caret-color: #ffff;"></i></a>
+    <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light">
+    <div class="text-center">Danitza Bonilla | Frontend Developer</div>
+  </div>
+</footer>
+`;
