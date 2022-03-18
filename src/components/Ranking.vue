@@ -16,7 +16,7 @@
       <v-divider v-if="index !== 0"></v-divider>
       <div class="m-4">
         <div class="columns is-mobile">
-          <div class="column is-4">
+          <div class="column is-6-mobile is-4-tablet">
             <v-badge
               :content="`#${index + 1}`"
               :left="true"
